@@ -89,9 +89,9 @@ export class PhotoService {
   }
 
   private async readAsBase64(cameraPhoto: CameraPhoto) {
-    // "hybrid" will detect Cordova or Capacitor
+    
     if (this.platform.is('hybrid')) {
-      // Read the file into base64 format
+      
       const file = await Filesystem.readFile({
         path: cameraPhoto.path
       });
@@ -99,7 +99,7 @@ export class PhotoService {
       return file.data;
     }
     else {
-      // Fetch the photo, read as a blob, then convert to base64 format
+      
       const response = await fetch(cameraPhoto.webPath);
       const blob = await response.blob();
 
@@ -124,8 +124,7 @@ export class PhotoService {
         path: fileName
       });
 
-      // Display the new image by rewriting the 'file://' path to HTTP
-      // Details: https://ionicframework.com/jp/docs/building/webview#file-protocol
+      
       return {
         filepath: fileUri.uri,
         webviewPath: Capacitor.convertFileSrc(fileUri.uri),

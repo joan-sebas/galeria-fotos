@@ -1,3 +1,6 @@
-# galeria-fotos
-APP CAMARA
-App diseñada en IONIC, el cual consiste en tomar una foto y poder guardarla en una galeria, incluso si la app se cierra, se debe poder recuperar las imagenes
+# IMPLEMENTACION CAMARA Y WEBSERVICE
+En esta app, se prentende realizar una camara la cual pueda tomar fotos, y guardarlas dentro del
+  dispositivo y consumir una API REST, para implementar un webservice
+
+La pagina de la cual se esta consumiendo la API es:
+https://jsonplaceholder.typicode.com/
